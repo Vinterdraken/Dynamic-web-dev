@@ -15,11 +15,11 @@
    color:red;
   }
 
-.flex-container{
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-}
+  .flex-container{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction:row-reverse;
+  }
 
   header, section, article, nav, aside,
   footer, div {
