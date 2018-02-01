@@ -1,15 +1,16 @@
-body {
- margins:auto;
- width:80%;
-}
+  body {
+   margins:auto;
+   width:80%;
+  }
 
-.warning {
-  font-weight: bold;
-}
+  .warning {
+    font-weight: bold;
+  }
 
-#boldedone{
-  font-weight: bold;
-}
-h1{
- color:red;
-}
+  #boldedone{
+    font-weight: bold;
+  }
+
+  h1{
+   color:red;
+  }
