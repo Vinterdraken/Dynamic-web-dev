@@ -18,7 +18,8 @@
   .flex-container{
     display: -webkit-flex;
     display: flex;
-    flex-direction:row-reverse;
+    flex-direction:row;
+    justify-content: center;
   }
 
   header, section, article, nav, aside,
