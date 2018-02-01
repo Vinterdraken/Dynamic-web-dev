@@ -25,7 +25,13 @@
   .flex-post{
     display: -webkit-flex;
     display: flex;
-    flex-direction: row;    
+    flex-direction: column;
+  }
+
+  .flex-post-content{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row; 
   }
 
   header, section, article, nav, aside,
