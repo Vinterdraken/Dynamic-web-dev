@@ -15,6 +15,11 @@
    color:red;
   }
 
+.flex-container{
+  display: -webkit-flex;
+  display: flex;
+}
+
   header, section, article, nav, aside,
   footer, div {
    font-family: sans-serif;
