@@ -1,0 +1,25 @@
+-- Task 2 --
+
+When I type some things in the searching box, we get 5 different events:
+- key down
+- key press
+- textInput
+- input
+- key up
+
+When I hit the submit button, the URL which the page tried to reach is:
+"Navigated to https://flower-gloria-8080.codio.io/week3/lab/index.html?serachterms=bonjour&submit=Noogle+it%21"
+
+Different type of event;
+- key down
+- key press
+- key up
+
+- textInput
+- input
+
+- mouseMove
+- pointeurMove
+- click
+
+- change
