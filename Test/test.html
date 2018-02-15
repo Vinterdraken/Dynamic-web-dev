@@ -8,19 +8,7 @@
   </head>
   <body>
     <h1>JS Sandbox</h1>
-    <script type="text/javascript">
-    function checkCookie() {
-        var username = getCookie("username");
-        if (username != "") {
-            alert("Welcome again " + username);
-        } else {
-            username = prompt("Please enter your name:", "");
-            if (username != "" && username != null) {
-                setCookie("username", username, 365);
-            }
-        }
-    }
-    </script>
+    <a href="#" onclick="checkCookie();">Connect</a>
   <!--
     <form class="" action="index.html" method="post">
       Please insert your Username<input type="text" name="Username" value="">
