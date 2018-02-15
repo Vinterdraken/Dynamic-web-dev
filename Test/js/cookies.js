@@ -24,9 +24,9 @@ function getCookie(cName) {
 function checkCookie() {
     var username = getCookie("username");
     if (username != "") {
-        alert("Hello my name is " + username + "and I'm a cookie :)");
+        alert("Hello my name is " + username + " and I'm a cookie :)");
     } else {
-        username = prompt("Please enter your name:", "");
+        username = prompt("Please enter the cookie's name:", "");
         if (username != "" && username != null) {
             setCookie("username", username, 365);
         }
@@ -35,5 +35,5 @@ function checkCookie() {
 
 function deleteCookie(cName) {
     document.cookie = cName + '=; Path=/;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    alert("The cookie has been slain! x.x");
+    alert("THE COOKIE HAS BEEN SLAIN! x.x");
 };
