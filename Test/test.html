@@ -4,11 +4,23 @@
     <meta charset="utf-8">
     <title> Test pqge for JS</title>
 
-    <script type="text/javascript" src="js/cookies.js"></script>
+    <!--<script type="text/javascript" src="js/cookies.js"></script>-->
   </head>
   <body>
     <h1>JS Sandbox</h1>
-    <button type="button" name="enter" onclick="checkCookie();">Welcome</button>
+    <script type="text/javascript">
+    function checkCookie() {
+        var username = getCookie("username");
+        if (username != "") {
+            alert("Welcome again " + username);
+        } else {
+            username = prompt("Please enter your name:", "");
+            if (username != "" && username != null) {
+                setCookie("username", username, 365);
+            }
+        }
+    }
+    </script>
   <!--
     <form class="" action="index.html" method="post">
       Please insert your Username<input type="text" name="Username" value="">
