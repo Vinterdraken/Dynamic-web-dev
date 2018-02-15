@@ -1,21 +1,24 @@
-
-function isThereSomeCookiesExisting(){
-  if (document.cookie != null) {
-    return true;
-  }
-  else {
-    return false;
-  }
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-function createCookie(){
-  var username = post.getElementsByName('Username');
-  document.cookie = "username=" + username + "; expires=Sun, 18 Feb 2018 00:00:00 UTC;";
-}
-
-function reconizeUser(){
-  var username = document.cookie;
-
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
 
 function checkCookie() {
