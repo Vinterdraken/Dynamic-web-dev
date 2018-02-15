@@ -1,12 +1,12 @@
-function setCookie(cname, cvalue, exdays) {
+function setCookie(cName, cValue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    document.cookie = cName + "=" + cValue + ";" + expires + "; Path=/";
 }
 
-function getCookie(cname) {
-    var name = cname + "=";
+function getCookie(cName) {
+    var name = cName + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(';');
     for(var i = 0; i <ca.length; i++) {
@@ -32,3 +32,7 @@ function checkCookie() {
         }
     }
 }
+
+function deleteCookie(cName) {
+    document.cookie = cName + '=; Path=/;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+};
