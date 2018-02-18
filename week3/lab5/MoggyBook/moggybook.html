@@ -18,37 +18,37 @@
 				<tr>
 					<td>Username:</td>
 					<td>
-						<input type="text" id="username" value="a">
+						<input type="text" id="username">
 					</td>
 				</tr>
 				<tr>
 					<td>Breed:</td>
 					<td>
-						<input type="text" id="breed" value="b">
+						<input type="text" id="breed">
 					</td>
 				</tr>
 				<tr>
 					<td>Email:</td>
 					<td>
-						<input type="text" id="email" value="c">
+						<input type="text" id="email">
 					</td>
 				</tr>
 				<tr>
 					<td>Homepage:</td>
 					<td>
-						<input type="text" id="homepage" value="d">
+						<input type="text" id="homepage">
 					</td>
 				</tr>
 				<tr>
 					<td>Date of Birth:</td>
 					<td>
-						<input type="text" id="dateOfBirth" value="e">
+						<input type="text" id="dateOfBirth">
 					</td>
 				</tr>
 				<tr>
 					<td>About:</td>
 					<td>
-						<input type="text" id="about" value="f">
+						<input type="text" id="about">
 					</td>
 				</tr>
 			</table>
@@ -57,7 +57,7 @@
 
 		<script>
 			function testResult(form){
-				var username = document.getElementById("username").value; // form.username.value not working, error: Cannot read property 'username' of null
+				var username = form.username.value; // form.username.value not working, error: Cannot read property 'username' of null
 				var breed = document.getElementById("breed").value;
 				var email = document.getElementById("email").value;
 				var homepage = document.getElementById("homepage").value;
