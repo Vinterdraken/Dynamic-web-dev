@@ -1,0 +1,18 @@
+site: www.bbc.co.uk
+
+1/
+	it took 10 http requests to load the homepage  
+2/
+	~300Kb have been transfered
+3/
+	Time of Loading  = 3.46s
+4/
+	https://sa.bbc.co.uk/bbc/bbc/s?name=home.page&hp_dupe_detected=1&hp_dedupe_occurred=1&hp_module_name=more%20lifestyle&link_location=top-stories-module&hp_module_template=4&hp_sgm_variant=0&hp_sgm_id=f247a212e6&hp_sgm_user_score=&hp_sgm_user_met_criteria=0&ns_type=hidden&action_name=module_deduped&action_type=remove&ml_name=webmodule&ml_version=89&blq_e=orbit&blq_r=orbit&blq_s=orbit&blq_v=default&language=en&app_type=responsive&location_name=&bbc_mc=ad1ps1pf1&mvt_disco04_stocktake=v2_sticky_on_load_bottom&screen_resolution=1366x768&bbc_site=homepage&ns_ti=BBC%20-%20Home&ns_c=UTF-8&ns__t=1518968439358&ns_jspageurl=https%3A%2F%2Fwww.bbc.co.uk%2F&ns_referrer=
+	This request took the longest time 
+5/
+	- 40 images were loaded
+	- 8 css files were loaded
+	- 18 js files were loaded
+6/
+	https://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1.js
+	This file is use to get data from a database
