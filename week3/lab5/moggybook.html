@@ -57,7 +57,7 @@
 
 		<script>
 			function testResult(form){
-				var username = document.getElementById("username").value; // form.username.value not working, error: Cannot read property 'username' of null
+				var username = form.username.value; // form.username.value not working, error: Cannot read property 'username' of null
 				var breed = document.getElementById("breed").value;
 				var email = document.getElementById("email").value;
 				var homepage = document.getElementById("homepage").value;
@@ -67,7 +67,7 @@
 				alert("You registred: " + username + ", " + breed + ", " + email + ", " + homepage + ", " + dateOfBirth + ", " + about);
 			}
 		</script>	
-		
+
 	</body>
 
 </html>
