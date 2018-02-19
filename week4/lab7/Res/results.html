@@ -20,23 +20,18 @@
 				// split into seperate name and value
 				// print to the browser console
 				for (i = 0; i < nvPairs.length; i++) {
-				     var nvPair = nvPairs[i].split("=");
-				     var name = nvPair[0];
-				     var value = nvPair[1];
-					 if(name == 'q') {
-						 // populate the empty span element with the query terms
-						 // grab reference to "query" <span> using a DOM method
-						 // update its innerHTML property with value
-						 
-					 }
+					var nvPair = nvPairs[i].split("=");
+				    var name = nvPair[0];
+				    var value = nvPair[1];
+					if(name == 'q') {
+						document.getElementById("query").innerHTML = value;
+					}
 				}
 			}			
 		</script>
 	</head>
 	<body onload="updateQuery();">
-		<h1>
-			Noogle!
-		</h1>
+		<h1>Noogle!</h1>
 		
 		Searched for: <span id="query"></span>
 		
