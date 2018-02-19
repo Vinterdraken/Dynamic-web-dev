@@ -1,5 +1,7 @@
 site: www.bbc.co.uk
 
+Testing
+
 1/
 	it took 10 http requests to load the homepage  
 2/
@@ -16,3 +18,26 @@ site: www.bbc.co.uk
 6/
 	https://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1.js
 	This file is use to get data from a database
+	
+
+Filtering
+
+1/
+
+2/
+	Server
+	
+3/
+	text/html; charset=UTF-8
+	
+4/
+	User agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
+	
+	A user agent is a software that is acting on behalf of a user. One common use of the term refers to a web browser telling a website information about the browser and operating system. 
+	This allows the website to customize content for the capabilities of a particular device, but also raises privacy issues.
+	
+5/
+	The HTML code is contained in the Response tab.
+	
+6/
+	8 cookies have been send/receive.
