@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		
+
+	</head>
+
+	<body>
+		<p>Skittles</p>
+		<p>Fear</p>
+		<p>Anger</p>
+
+		
+		<br>
+		<h1>Some test buttons</h1><br>
+		<button name="InsertButton" onclick="insertB();">Changing Order</button>
+		<button name="InsertButton" onclick="createNodeTest();">Trying create text node</button>
+		<button name="InsertButton" onclick="createNodeTest2();">Close to create text node</button>
+		<button name="InsertButton" onclick="createNodeTest3();">Create text node</button>
+		<br><br>
+		<input type="text" id="TextInput"><br>
+		<button name="InsertButton" onclick='createText(document.getElementById("TextInput").value);'>Create custom text node (use the text input)</button>
+		<button name="InsertButton" onclick='replaceText(document.getElementById("TextInput").value);'>Replace some text</button>
+
+		<script>
+			function insertB(){
+				var paragraphs = document.body.getElementsByTagName("p");
+				document.body.insertBefore(paragraphs[2], paragraphs[0]);
+			}
+
+			function createNodeTest(){
+				document.body.innerHTML = "<p> Well that was usefull </p>";
+			}
+
+			function createNodeTest2(){
+				var newPara = document.createTextNode("A Jedi craves not these things");
+				document.body.appendChild(newPara);
+			}
+
+			function createNodeTest3(){
+				var newPara = document.createElement("p");
+				var text = document.createTextNode("A Jedi craves not these things");
+				newPara.appendChild(text);
+				document.body.appendChild(newPara);
+			}
+
+			function createText(word){
+				var newPara = document.createElement("p");
+				var text = document.createTextNode("_" + word);
+				newPara.appendChild(text);
+				document.body.appendChild(newPara);				
+			}
+
+			function replaceText(word){
+				var paragraphs = document.body.getElementsByTagName("p");
+
+				var newPara = document.createElement("p");
+				var text = document.createTextNode("" + word);
+				newPara.appendChild(text);
+
+				document.body.replaceChild(newPara, paragraphs[0]);		
+			}
+		</script>
+
+
+	</body>
+</html>
