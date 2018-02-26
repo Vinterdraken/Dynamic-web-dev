@@ -6,12 +6,12 @@
 
     <script type="text/javascript" src="js/cookies.js"></script>
   </head>
-  <body>
+  <body onload="checkCookies();">
     <h1>JS Sandbox</h1>
 
-    <button type="button" name="button" onclick="checkCookie();">Make a cookie</button>
+    <button type="button" name="button" onclick="checkCookies();">Check my cookie</button>
     <br><br>
-    <button type="button" name="button" onclick='deleteCookie("username");'>Kill the cookie!</button>
+    <button type="button" name="button" onclick="deleteCookie();">Kill my cookie!</button>
 
   </body>
 </html>

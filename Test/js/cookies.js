@@ -1,10 +1,22 @@
+
+/**
+* This function is creating a cookie
+* cName is the name of the cookie
+* cValue is the value stored by the cookie
+* exdays is the number of day that the cookie will stay alive :3
+*/
 function setCookie(cName, cValue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+ d.toUTCString();
-    document.cookie = cName + "=" + cValue + ";" + expires + "; Path=/";
+    cValueInLower = cValue.toLowerCase();    
+    document.cookie = cName + "=" + cValueInLower + ";" + expires + "; Path=/";
 }
 
+/**
+* This function allow us to get the value of a cookie
+* cName is the name of the cookie that we want the value from
+*/
 function getCookie(cName) {
     var name = cName + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -21,19 +33,56 @@ function getCookie(cName) {
     return "";
 }
 
-function checkCookie() {
-    var username = getCookie("username");
-    if (username != "") {
-        alert("Hello my name is " + username + " and I'm a cookie :)");
-    } else {
-        username = prompt("Please enter the cookie's name:", "");
-        if (username != "" && username != null) {
+/**
+* This function will check the cookies, if there not existing or empty it will ask the user some information, about his name/pseudo and the current country where he is
+* if the cookies are existing then it will ask if the user still in the last country stored 
+*/
+function checkCookies() {
+    var usernameCookie = getCookie("username");
+    var countryCookie = getCookie("country");
+    var tutorialCookie = getCookie("tutorial");
+
+    console.log(usernameCookie);
+    console.log(countryCookie);
+    console.log(tutorialCookie);
+
+    if (usernameCookie != "" && countryCookie != "" && tutorialCookie == "done") {
+        var newCountry = prompt("Hi " + usernameCookie + "! It's good to see you again. :D \n The last country you told me you where in is: " + countryCookie + "Please if you're not anymore there let me know in which country you are :)", countryCookie);
+        setCookie("country", newCountry, 365);
+    } 
+    else if(usernameCookie != "" && countryCookie != "" && tutorialCookie == "todo"){
+        alert("This is a short tutorial to explain you how I work, please read this to make sure you'll understand my behavior :)");
+        setCookie("tutorial", "done", 365);         
+    }
+    else {
+        var username = prompt("Hi there ! I'm the Culture Web App, what's your name ? :D (You can use a pseudo if you want)", "");
+        var country = prompt("I'd like to know your location, this way I'll can make your experience with me better ;)", "");
+
+        if (username != "" && username != null && country != "" && country != null) {
             setCookie("username", username, 365);
+            setCookie("country", country, 365);
+            setCookie("tutorial", "todo", 365);            
+        }
+
+        tutorial = getCookie("tutorial");
+
+        if(tutorial == "todo"){
+            var answer = Prompt("This is a short tutorial to explain you how I work, please read this to make sure you'll understand my behavior. Please write \"yes\" in the text input below to let me know that you're aware :)", "");
+            if(answer.toLowerCase() == "yes"){
+                setCookie("tutorial", "done", 365);
+            }             
         }
     }
 }
 
-function deleteCookie(cName) {
-    document.cookie = cName + '=; Path=/;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    alert("THE COOKIE HAS BEEN SLAIN! x.x");
+/**
+* This function kill all our cookies :'(
+*/
+function deleteCookie() {
+
+    setCookie("username", "", -1); 
+    setCookie("country", "", -1); 
+    setCookie("tutorial", "", -1);
+
+    alert("THE COOKIES HAVE BEEN SLAIN! x.x");
 };
