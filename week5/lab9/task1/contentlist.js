@@ -6,10 +6,12 @@ $(function(){
 	// 1. find the addcontent button in task-two.html
 	// 2. add an event listener for 'click' events
 	// 3. assign the addContent() function to the click event
-
-	$('#addcontent').click(function(){
-		addContent();
+	$(contentlist.html).ready(function(){
+		$('#addcontent').click(function(){
+			addContent();
+		})
 	})
+	
 });
 
 function addContent () {
