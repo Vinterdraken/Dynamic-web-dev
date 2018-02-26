@@ -2,7 +2,7 @@ $(function(){
 
 	$('thead').find('tr').addClass("head");
 
-	$('thead').find('tr').click(function(){ 
+	$('thead').find('th').click(function(){ 
       	$(this).tablesorter(); 
     });
 
