@@ -1,0 +1,15 @@
+.odd {
+	background-color: lightgray;
+}
+
+.even {
+	background-color: darkgray;
+}
+
+.head {
+	background-color: #9933cc;
+}
+
+.selected {
+	background-color: red;
+}
