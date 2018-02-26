@@ -26,10 +26,11 @@ function addContent () {
 	};
 	items_html += "</ul>";
 	
+
 	// using jQuery
 	// 1. find the content div
 	// 2. modify its html attribute by adding items_html
 
-	$('div').find('#content').append(items_html);
+	$('#content').append(items_html);
 }
 
