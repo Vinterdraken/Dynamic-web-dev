@@ -63,14 +63,11 @@ function checkCookies() {
             setCookie("country", country, 365);
             setCookie("tutorial", "todo", 365);            
         }
-
-        tutorial = getCookie("tutorial");
-
-        if(tutorial == "todo"){
-            var answer = Prompt("This is a short tutorial to explain you how I work, please read this to make sure you'll understand my behavior. Please write \"yes\" in the text input below to let me know that you're aware :)", "");
-            if(answer.toLowerCase() == "yes"){
-                setCookie("tutorial", "done", 365);
-            }             
+        
+        var answer = Prompt("This is a short tutorial to explain you how I work, please read this to make sure you'll understand my behavior. Please write \"yes\" in the text input below to let me know that you're aware :)", "");
+        if(answer.toLowerCase() == "yes"){
+            setCookie("tutorial", "done", 365);
+        }             
         }
     }
 }
