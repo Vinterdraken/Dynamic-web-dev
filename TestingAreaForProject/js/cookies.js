@@ -47,7 +47,7 @@ function checkCookies() {
     console.log(tutorialCookie);
 
     if (usernameCookie != "" && countryCookie != "" && tutorialCookie == "done") {
-        var newCountry = prompt("Hi " + usernameCookie + "! It's good to see you again. :D \n The last country you told me you where in is: " + countryCookie + "Please if you're not anymore there let me know in which country you are :)", countryCookie);
+        var newCountry = prompt("Hi " + usernameCookie + "! It's good to see you again. :D \nLast time you told me you where in " + countryCookie + ". \nPlease if you're not there anymore, let me know where you are now :)", countryCookie);
         setCookie("country", newCountry, 365);
     } 
     else if(usernameCookie != "" && countryCookie != "" && tutorialCookie == "todo"){
