@@ -8,7 +8,7 @@ $(document).ready(function(){
 		$.ajax({
 
 			type: "GET",
-			url: "resources.json",
+			url: "json/resources.json",
 
 			success: function(result){
 
