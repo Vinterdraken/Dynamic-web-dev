@@ -4,32 +4,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>John's very usefull movie search</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
 <!-- these scripts are meant to be ran individually just uncomment the one you want to investigate.
 They are in order of progression-->
 
 <script src="js/prettyPrintJSON.js"></script>
 <script src="js/finalScript.js"></script>
 </head>
-<body id="base">
+<body id="base" class="col-md-12">
 	<h1>John's very usefull movie search</h1>
 	<h2>The search isn't very good and if it cant find an answer will return nothing :( </h2>
 	<h3>Suggestions Ghostbusters, Star Wars, Clerks, 1984, Breakfast Club</h3>
-
+    <br>
+    Get JSON:
     <form id="jsonform">
-    	<input type ="text" id="searchterms">
-        <input type ="submit" value="Search">
+    	<input type ="text" id="jsonform_searchterms">
+        <input type ="submit" class="btn btn-primary" value="Search">
     </form>
-    <br><br>
+    <br>
+    Get List:
     <form id="searchform">
-    	<input type ="text" id="searchterms">
-        <input type ="submit" value="Search">
+    	<input type ="text" id="searchform_searchterms">
+        <input type ="submit" class="btn btn-primary" value="Search">
     </form>
 
-     <div id="resultsbox">
-     	<ol id="results">
-         <!-- content will be loaded here (promise) -->
-		</ol>
-      </div>
+    <div id="display-data" >        
+            
+    </div>
 </body>
 </html>
