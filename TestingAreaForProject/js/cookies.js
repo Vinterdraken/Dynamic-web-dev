@@ -8,9 +8,8 @@
 function setCookie(cookieName, cookieValue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+ d.toUTCString();
-    cookieValueInLower = cookieValue.toLowerCase();    
-    document.cookie = cookieName + "=" + cookieValueInLower + ";" + expires + "; Path=/";
+    var expires = "expires="+ d.toUTCString();        
+    document.cookie = cookieName + "=" + cookieValue + ";" + expires + "; Path=/";
 }
 
 /**
@@ -38,7 +37,7 @@ function getCookie(cookieName) {
 * if the cookies are existing then it will ask if the user still in the last country stored 
 */
 function checkCookies() {
-	
+
     var usernameCookie = getCookie("username");
     var countryCookie = getCookie("country");
     var tutorialCookie = getCookie("tutorial");
