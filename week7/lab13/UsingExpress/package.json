@@ -1,0 +1,22 @@
+{
+  "name": "dynamic-web-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vinterdraken/Dynamic-web-dev.git"
+  },
+  "author": "Mateo RAT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vinterdraken/Dynamic-web-dev/issues"
+  },
+  "homepage": "https://github.com/Vinterdraken/Dynamic-web-dev#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
